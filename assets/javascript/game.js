@@ -13,8 +13,12 @@ function letterSelector() {
     console.log(randomLetter);
 }
 
+function keyLogger() {
+    guessedArray.push(onkeyup);
+}
+
 document.onkeyup = function(event) {
-    var playersChoice = event.key;
+    var playersChoice = event.onkeyup;
 
     if (playersChoice === randomLetter) {
         wins++;
